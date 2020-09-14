@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Task_5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Ведите число:");
+        System.out.println("Ведите число: ");
         int x = sc.nextInt();
         System.out.println(x + "*1" + "="+ x*1);
         System.out.println(x + "*2" + "="+ x*2);
