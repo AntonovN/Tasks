@@ -1,5 +1,7 @@
 package com.company;
+
 import java.util.Scanner;
+
 public class Task_7 {
     public static void main(String[] args) {
         int x, y, z;
@@ -12,11 +14,14 @@ public class Task_7 {
 
         if (number == x) {
             System.out.println("это чисто есть в константе");
-        } else if (number == y) {
+        }
+        if (number == y) {
             System.out.println("это чисто есть в константе");
-        } else if (number == z) {
+        }
+        if (number == z) {
             System.out.println("это чисто есть в константе");
-        } else {
+        }
+        else {
             System.out.println("нет такого числа в константе");
         }
     }
