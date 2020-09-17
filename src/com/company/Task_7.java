@@ -20,8 +20,7 @@ public class Task_7 {
         }
         if (number == z) {
             System.out.println("это чисто есть в константе");
-        }
-        else {
+        } else {
             System.out.println("нет такого числа в константе");
         }
     }
