@@ -12,17 +12,12 @@ public class Task_7 {
         System.out.print("Input number: ");
         int number = in.nextInt();
 
-        if (number == x) {
-            System.out.println("это чисто есть в константе");
-        }
-        if (number == y) {
-            System.out.println("это чисто есть в константе");
-        }
-        if (number == z) {
+        if (x == number || y == number || z == number) {
             System.out.println("это чисто есть в константе");
         } else {
             System.out.println("нет такого числа в константе");
         }
+
     }
 }
 
