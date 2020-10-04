@@ -23,13 +23,14 @@ public class Task_10 {
             System.out.println();
         }
         System.out.println("Только первая строка ");
-        for (int i = 0; i < size - (size - 1); i++) {
-            for (int j = 0; j < array[i].length; j++) {
+        //for (int i = 0; i < size - (size - 1); i++) {
+        for (int i = 0; i < array[i].length; i++) {
 
-                System.out.print(array[i][j] * 3 + " ");
-            }
-            System.out.println();
+            System.out.print(array[0][i] * 3 + " ");
+
         }
+        System.out.println();
+        //}
     }
 }
 
