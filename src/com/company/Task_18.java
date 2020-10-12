@@ -1,37 +1,30 @@
 package com.company;
 
 import java.io.*;
+import java.util.Scanner;
 
 
 public class Task_18 {
 
     public static void main(String[] args) throws IOException {
-
-        String s;
-
-        try (BufferedReader br = new BufferedReader(new FileReader("test.txt"))) {
-            while ((s = br.readLine()) != null) {
-
-                System.out.println(s); // вывод содежимиого файла
-
-                String[] stringArray = s.split("/r/n"); // запись строк в массив
-                System.out.println(stringArray.length); // вывод на экран количества строк в файле
-
-
-                BufferedReader brr = new BufferedReader(new InputStreamReader(System.in));
-                System.out.println("Признак конца ввода - строка 'stop' ");
-
-                try (FileWriter fw = new FileWriter("test.txt")) {
-                    for (int i = 0; i <= stringArray.length; i++) {
-                        System.out.print(": ");
-                        s = brr.readLine();
-                        s = s + "/r/n";
-
-                        fw.write(s);
-                    }
-                }
-            }
+        FileReader fr = new FileReader("test.txt"); // инициализация reader
+        Scanner scan = new Scanner(fr);
+        int i = 1;
+        System.out.println("содержимое файла");
+        while (scan.hasNextLine()) {
+            System.out.println(i + " : " + scan.nextLine());
+            i++;
         }
+        fr.close(); // закрыли поток для reader
+        System.out.println("введите новые строки");
+        FileWriter fw = new FileWriter("test.txt"); // инициализация writer
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        for (int j = (i - 1); j > 0; j--) {
+            fw.write(reader.readLine() + "\n");
+        }
+        System.out.println("строки перезаписаны");
+
+        fw.close();
 
     }
 }
